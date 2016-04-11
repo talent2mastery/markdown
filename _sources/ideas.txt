@@ -1,0 +1,216 @@
+
+=========
+Ideas
+=========
+
+.. contents:: 
+
+Themes
+=======
+
+Data
+
+* URIs
+* Linked Data (RDF, RDFa, JSONLD)
+* Graphs, Nodes, Edges
+
+seeAlso:
+
+* https://wrdrd.com/docs/consulting/knowledge-engineering.html
+
+Projects
+=========
+
+Projects I have created:
+
+| https://westurner.org/wiki/projects
+| Src: https://github.com/westurner/wiki/wiki/projects
+
+Open Source Projects I have contributed to:
+
+| https://westurner.org/wiki/contributions
+| Src: https://github.com/westurner/wiki/wiki/contributions
+
+Twedges
+--------
+* (Directed) edges between tweets, later
+
+  * Visualize "View Conversation" directed edges
+  * Add edges with attributes and provenance metadata
+  * Add a hashtag (recent/all tags w/ checkboxes)
+
+    * Use case: I am developing a report on [Self Directed Learning],
+      and have a few topics I'd like to discover and curate, mashup,
+      remix
+
+* [ ] Twitter #JSONLD @context
+
+  * Additional properties:
+
+    * Expanded links
+    * Picture URIs
+    * Twitter Card Metadata
+    * OpenGraph Metadata
+    * Extracted RDF
+
+      * Parse Errors
+
+  * Additional edge classes:
+
+    * TopicEdge
+    * ReplyEdge
+    * ReplyWithCommentEdge
+
+* FOAF, SIOC, Schema.org
+* Extract links, count uniques
+* #Nanotation RDF microsyntax (seeAlso: `Sphinx Extensions`)
+
+  * Tab-completion for subjects, predicates, objects?
+
+    * see http://json-ld.org/playground/
+
+Trails
+-------
+* Sequences of actions
+
+  * https://github.com/westurner/brw
+  * https://bitbucket.org/westurner/browselinks
+
+Overlay
+--------
+* EAV visualization
+
+RDFLib Extensions
+-------------------
+* RDFLib IPython notebook
+
+  * https://bitbucket.org/westurner/rdflib_notebooks
+
+* RDF exploration CLI
+
+  * https://github.com/jonathanslenders/python-prompt-toolkit
+  * schema-aware tab-completion
+
+Sphinx Extensions
+-------------------
+
+* sphinxcontrib-RDF
+
+  * https://github.com/westurner/sphinxcontrib-rdf
+  * Directive to include an RDF syntax w/ pygments highlighting (see: healthref
+    (ttl))
+  * Extract triples from an RST (docutils) node graph
+  * Role w/ context? (like RDFa)
+
+* sphinxcontrib-ipython
+
+  * run sphinx docs with ``.. ipython::`` directives through IPython
+    interactively (e.g. w/ tmpipnb)
+  * ipythonify tests (ipython_nose + what API w/ a notebook?)
+
+
+Open Source Mailing List Extractor
+----------------------------------
+Use cases:
+
+* https://mail.python.org/pipermail/python-ideas/2014-December/030228.html
+* incentivization of actionable crossreferences
+* PEP research
+* "is this actionable?"
+* "are we voting?"
+
+
+* Crawl/parse/extract links and +1 from given thread(s)
+  
+  * Detect a few standard link types:
+
+    * Issue
+    * Src
+    * Doc
+    * Ref
+    * x-link
+
+  * +1s with expandable snippets? (like ``grep -C``)
+
+* There could be configurable per-list link heuristics:
+
+  * http[s]
+  * Issue: https://bugs.python.org/issue(\d+)
+  * Src: https://hg.python.org/<repo>/<path>
+  * Src: https://github.com/<org>/<project>/<path>
+  * Src: https://bitbucket.org/<org>/<project>/<path>
+  * Patch/Attachment: http[s]://bugs.python.org/(file[\d]+)/<filename(.diff)>
+  * Doc: https://docs.python.org/<ver>/<path>
+  * Wiki: https://wiki.python.org/moin/<path>
+  * Homepage: https://www.python.org/<path>
+  * PyPI pkg: https://pypi.python.org/pypi/<path>
+  * Warehouse pkg: https://warehouse.python.org/project/<path>
+  * Wikipedia: https://[lang].wikipedia.org/wiki/<page> --> (dbpedia:<page>)
+  * Build: http://buildbot.python.org/all/builders/AMD64%20Ubuntu%20LTS%203.4/builds/771
+
+
+* This could - most efficiently - be added to mailman
+  (e.g. in Postorious and/or HyperKitty)
+
+  * http://mailman-bundler.readthedocs.org/en/latest/
+  * http://pythonhosted.org//mailman/
+  * https://mail.python.org/mailman/listinfo/mailman-developers
+
+
+Path / URI / URN and the __div__ operator
+-------------------------------------------
+* build URI paths with ``/``
+* URL encoding
+* some combination of operators could be useful::
+
+   scheme://user@host.netloc:port/path/?query#fragment
+
+   from _ import URI, https, //, http
+   https // 'user@host.netloc:port' / path ** query % fragment
+
+* __div__      /
+* __floordiv__ //
+* __and__      &&
+* __mod__      %
+* __invert__   ~
+* __or__       |
+* __xor__      ^
+* __and__      +
+* __mul__      *
+* __pow__      **
+* __lshift__   <<
+* __rshift__   >>
+
+References
+~~~~~~~~~~~~
+* https://pypi.python.org/pypi/path.py -- __div__
+* https://pypi.python.org/pypi/pathlib (stdlib)
+* https://pypi.python.org/pypi/furl
+* https://pypi.python.org/pypi/URLObject
+* https://pypi.python.org/pypi/rdflib
+
+
+schema.org/Animal, AnimalShelter, and ImageNet
+-----------------------------------------------
+https://lists.w3.org/Archives/Public/public-vocabs/2015Feb/0121.html
+
+* http://schema.org/Animal ( http://schema.org/AnimalShelter )
+* Labeling (e.g. ImageNet animals)
+* Matching / gamification
+
+schema.org/Course
+-------------------
+https://github.com/schemaorg/schemaorg/issues/195
+
+
+Tools Vocabularies
+=====================
+| https://westurner.org/tools/
+| Src: https://github.com/westurner/tools
+| Docs: https://westurner.org/wiki/tools.html#tool-collections
+
+Central tools.rst [ ... -> tools.rdf, tools.ttl, tools.jsonld ]
+
+* https://westurner.org/provis/tools.html
+* https://westurner.org/dotfiles/tools.html
+* See RDFJS pad re "Tools Schema" Classes and Properties: https://text.allmende.io/p/rdfjs 

@@ -1,0 +1,26 @@
+
+
+westurner/wiki
+================
+
+Contents:
+
+.. toctree::
+
+   ideas
+   projects
+   contributions
+   resume
+   workflow
+   github
+   bitbucket
+   workstations
+   accessibility
+   awesome-python-testing
+   tools
+
+
+******
+
+@ `westurner.org <https://westurner.org/>`__
+
